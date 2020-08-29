@@ -4,11 +4,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+var passport = require('passport');
 
 // method-override
 var methodOverride = require('method-override');
 // connect to the database with Mongoose
 require('./config/database')
+require('./config/passport');
 
 var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
@@ -24,6 +27,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'HitTheLinks!',
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 
 // method-override
 app.use(methodOverride('_method'));
