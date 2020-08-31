@@ -14,6 +14,6 @@ function index(req, res) {
 
 function show(req, res) {
     course.findById(req.params.id, function(err, course) {
-        res.render('courses/show', { course });
+        res.render('courses/show', { title: `${course.name}`, course });
     });
-}
+}   
