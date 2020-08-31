@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-var usersCtrl = require('../controllers/users');
+const usersCtrl = require('../controllers/users');
+// const coursesCtrl = require('../controllers/courses');
 
+// write a new review for a particular course
+// router.post('/:id/reviews', isLoggedIn, usersCtrl.create);
 
-// router.post('/reviews', isLoggedIn, usersCtrl.addReview);
+// router.put('/reviews/:id', isLoggedIn, usersCtrl.update);
 
 // router.delete('/reviews/:id', isLoggedIn, usersCtrl.delReview);
 

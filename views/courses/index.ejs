@@ -1,8 +1,13 @@
 <%- include('../partials/header') %>
 
-
-<h1>List of all Courses</h1>
-
+<h1>Courses In The Greater LA Area</h1>
+<br><br>
+<% courses.forEach(function(c) { %> 
+<h2 class="course-name"><%= c.name %> </h2>
+    <h3 class="city">City: <%= c.city %> </h3>
+        <a class="details" href="">See Course Details</a>
+        <br><br><br>
+<% }); %> 
 
 
 

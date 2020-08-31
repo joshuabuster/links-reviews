@@ -2,13 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-    content: String
+    text: String
 })
 
 const courseSchema = new Schema({
     name: String,
-    locations: String,
-    courseId: Schema.Types.ObjectId,
+    city: String,
     reviews: [reviewSchema]
 });
 

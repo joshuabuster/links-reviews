@@ -1,13 +1,18 @@
 const User = require('../models/user');
 
 // module.exports = {
-//     addReview,
+//     create,
+//     update,
 //     delReview
 // };
 
-// function addReview(req, res) {
+// function create(req, res) {
 
 // };
+
+// function update(req, res) {
+
+// }
 
 // function delReview(req, res) {
 

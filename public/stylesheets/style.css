@@ -27,8 +27,21 @@ a {
   background-color: white;
 }
 
+.details {
+  color: rgb(73, 73, 250);
+  background-color: rgb(154, 154, 154);
+}
+
 a:hover {
   color: rgb(113, 113, 255);
+}
+
+main {
+  padding: 35px;
+}
+
+h1 {
+  text-align: center;
 }
 
 
