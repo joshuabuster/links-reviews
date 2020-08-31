@@ -4,8 +4,8 @@
 <br><br>
 <% courses.forEach(function(c) { %> 
 <h2 class="course-name"><%= c.name %> </h2>
-    <h3 class="city">City: <%= c.city %> </h3>
-        <a class="details" href="">See Course Details</a>
+    <h4 class="city">City: <%= c.city %> </h4>
+        <a class="details" href="/courses/<%= c._id %> ">See Course Details</a>
         <br><br><br>
 <% }); %> 
 
