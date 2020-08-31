@@ -9,7 +9,7 @@
     <br><br>
     <h4>Write Your Own Review:</h4>
         <br>
-        <form action="/users" method="POST">
+        <form action="/courses/<%= course._id %>/reviews " method="POST">
             <textarea type="text" name="text" class="new-review"></textarea>
             <br><br>
             <button type="submit" class="submit-btn">Add Review</button>
