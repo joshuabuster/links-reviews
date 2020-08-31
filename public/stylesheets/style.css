@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: rgb(154, 154, 154);
+  background-color: rgb(130, 130, 130);
   font-family: Helvetica;
 }
 
@@ -28,8 +28,8 @@ a {
 }
 
 .details {
-  color: rgb(73, 73, 250);
-  background-color: rgb(154, 154, 154);
+  color: white;
+  background-color: rgb(130, 130, 130);
 }
 
 a:hover {
@@ -38,6 +38,7 @@ a:hover {
 
 main {
   padding: 35px;
+  color: white;
 }
 
 h1 {

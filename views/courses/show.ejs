@@ -1,11 +1,17 @@
 <%- include('../partials/header') %>
 
-
-
-
 <h1><%= title %> </h1>
 <h3>Located in the city of <%= city %>.</h3>
-
+<br>
+<h4>Course Reviews:</h4>
+    <br>
+    <p>reviews</p>
+    <br>
+        <form action="/users" method="POST">
+            <input type="text" name="text" class="course-review">
+            <br>
+            <button type="submit" class="submit-btn">Add Review</button>
+        </form>
 
 
 
