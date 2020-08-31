@@ -1,10 +1,14 @@
 const User = require('../models/user');
 
-module.exports = {
-    index,
-};
+// module.exports = {
+//     addReview,
+//     delReview
+// };
 
-function index(req, res, next) {
-    console.log(req.query);
-    res.render('course/index')
-}
+// function addReview(req, res) {
+
+// };
+
+// function delReview(req, res) {
+
+// }

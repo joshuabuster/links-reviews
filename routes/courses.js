@@ -4,7 +4,7 @@ const coursesCtrl = require('../controllers/courses.js');
 
 
 
-router.get('/courses', coursesCtrl.index);
+router.get('/', coursesCtrl.index);
 
 
 
