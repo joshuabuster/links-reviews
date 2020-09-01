@@ -19,8 +19,7 @@ function create(req, res) {
 };
 
 function edit(req, res) {
-    const review = Course.getOne(req.params.id);
-    res.render('courses/edit', { review });
+    res.render('courses/edit', { Course });
 }
 
 function update(req, res) {
