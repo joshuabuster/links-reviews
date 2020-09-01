@@ -6,6 +6,11 @@
   font-family: Helvetica;
 }
 
+main {
+  padding: 35px;
+  color: rgb(53, 228, 53);
+}
+
 .container {
   display: flex;
   padding: 30px;
@@ -36,19 +41,12 @@ a:hover {
   color: rgb(148, 148, 252);
 }
 
-main {
-  padding: 35px;
-  color: white;
-}
-
 h1 {
   text-align: center;
-  color: rgb(53, 228, 53);
 }
 
 h3 {
   text-align: center;
-  color: rgb(53, 228, 53);
 }
 
 #reviews-list-header {

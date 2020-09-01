@@ -4,8 +4,8 @@
 <br><br>
 <h4>Edit Your Own Review:</h4>
 <br>
-<form action="" method="PUT">
-    <textarea type="text" name="text" class="new-review"></textarea>
+<form action="/reviews/<%= review._id %> " method="PUT">
+    <textarea type="text" name="text" class="new-review">The users previous review</textarea>
     <br><br>
     <button type="submit" class="submit-btn">Submit</button>
 </form>

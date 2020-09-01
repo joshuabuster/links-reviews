@@ -8,10 +8,10 @@ const reviewsCtrl = require('../controllers/reviews');
 router.post('/courses/:id/reviews', isLoggedIn, reviewsCtrl.create);
 
 // show the edit reviews page
-router.get('/courses/:id/edit', isLoggedIn, reviewsCtrl.edit);
+router.get('/courses/:cid/reviews/:rid', reviewsCtrl.edit);
 
 // edit a review if the user wrote it
-router.put('/courses/reviews/:id', isLoggedIn, reviewsCtrl.update);
+router.put('/reviews/:id', isLoggedIn, reviewsCtrl.update);
 
 // delete a review if the user wrote it
 // router.delete('/reviews/:id', isLoggedIn, reviewsCtrl.delReview);
