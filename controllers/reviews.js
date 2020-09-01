@@ -12,7 +12,6 @@ function create(req, res) {
     Course.findById(req.params.id, function(err, course) {
         req.body.user = req.user;
         course.reviews.push(req.body);
-        console.log(req.body);
         course.save(function(err) {
             res.redirect(`/courses/${course._id}`);
         })
@@ -20,12 +19,10 @@ function create(req, res) {
 };
 
 function edit(req, res) {
-    // res.render('courses/edit', { Course });
     Course.findById(req.params.cid, function(err, course) {
-        let review = course.reviews.filter(f => f._id == req.params.rid)
-        // course.reviews.find({'_id': req.params.rid}, function(err, review) {
+        let reviewArray = course.reviews.filter(f => f._id == req.params.rid)
+        let review = reviewArray[0];
             res.render('courses/edit', {course, review, user:req.user._id});
-        // })
     })
 }
 

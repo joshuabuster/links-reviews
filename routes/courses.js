@@ -7,7 +7,7 @@ const coursesCtrl = require('../controllers/courses.js');
 router.get('/', coursesCtrl.index);
 
 // show a particular course
-router.get('/:id', coursesCtrl.show);
+router.get('/:id', isLoggedIn, coursesCtrl.show);
 
 
 
@@ -17,7 +17,10 @@ router.get('/:id', coursesCtrl.show);
 
 
 
-
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
+}
 
 
 
