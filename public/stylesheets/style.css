@@ -43,10 +43,16 @@ main {
 
 h1 {
   text-align: center;
+  color: rgb(53, 228, 53);
 }
 
 h3 {
   text-align: center;
+  color: rgb(53, 228, 53);
+}
+
+#reviews-list-header {
+  font-size: 20px;
 }
 
 textarea {
@@ -68,6 +74,9 @@ button:hover {
   background-color: rgb(53, 228, 53);
 }
 
+p {
+  color: rgb(53, 228, 53);
+}
 
 
 

@@ -3,7 +3,8 @@ const Course = require('../models/course');
 
 module.exports = {
     create,
-//     update,
+    edit,
+    update,
 //     delReview
 };
 
@@ -17,9 +18,14 @@ function create(req, res) {
     })
 };
 
-// function update(req, res) {
+function edit(req, res) {
+    const review = Course.getOne(req.params.id);
+    res.render('courses/edit', { review });
+}
 
-// };
+function update(req, res) {
+    
+};
 
 // function delReview(req, res) {
 

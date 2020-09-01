@@ -3,10 +3,12 @@
 <h1><%= title %> </h1>
 <h3>Located in the city of <%= city %>.</h3>
 <br>
-<h4>Course Reviews:</h4>
+<h4 id="reviews-list-header">Course Reviews:</h4>
     <br>
     <% course.reviews.forEach(function(r) { %> 
     <p><%= r.text %> </p>
+    <a class="details" href="/courses/<%= course._id %>/edit ">Edit</a>
+    <a class="details" href="">Delete</a>
     <br><br>
     <% }); %> 
     <h4>Write Your Own Review:</h4>
