@@ -7,7 +7,6 @@ const reviewsCtrl = require('../controllers/reviews');
 
 router.get('/', coursesCtrl.index);
 
-
 router.get('/new', isLoggedIn, coursesCtrl.newCourse);
 
 router.get('/:id', isLoggedIn, coursesCtrl.show);
@@ -18,11 +17,7 @@ router.get('/:id/edit', isLoggedIn, coursesCtrl.edit);
 
 router.put('/:id', isLoggedIn, coursesCtrl.update);
 
-// router.delete('/:id', isLoggedIn, coursesCtrl.delCourse);
-
-
-
-
+router.delete('/:id', isLoggedIn, coursesCtrl.delCourse);
 
 
 function isLoggedIn(req, res, next) {

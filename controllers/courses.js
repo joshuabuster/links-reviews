@@ -8,7 +8,8 @@ module.exports = {
     newCourse,
     create,
     edit,
-    update
+    update,
+    delCourse
 };
 
 function index(req, res) {
@@ -46,5 +47,15 @@ function update(req, res) {
     Course.findByIdAndUpdate(req.params.id, req.body, function(err, course) {
         if (err) redirect(`/courses/${course._id}/edit`);
         res.redirect(`/courses/${course._id}`);
+    })
+}
+
+function delCourse(req, res) {
+    Course.findByIdAndDelete(req.params.id, function(err) {
+        if (err) {
+            res.render('courses/edit');
+        } else {
+            res.redirect('/courses');
+        }
     })
 }
