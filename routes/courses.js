@@ -7,12 +7,14 @@ const reviewsCtrl = require('../controllers/reviews');
 
 router.get('/', coursesCtrl.index);
 
+
 router.get('/new', isLoggedIn, coursesCtrl.newCourse);
 
 router.get('/:id', isLoggedIn, coursesCtrl.show);
 
 router.post('/', isLoggedIn, coursesCtrl.create);
 
+router.get('/:id/edit', isLoggedIn, coursesCtrl.edit);
 
 
 

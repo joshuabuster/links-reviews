@@ -6,7 +6,8 @@ module.exports = {
     index,
     show,
     newCourse,
-    create
+    create,
+    edit
 };
 
 function index(req, res) {
@@ -31,5 +32,12 @@ function create(req, res) {
     course.save(function(err) {
         if (err) return render('course/new');
         res.redirect(`/courses/${course._id}`);
+    })
+}
+
+function edit(req, res) {
+    Course.findById(req.params.id, function(err, course) {
+        // if (!course.user.equals(req.user._id)) return res.redirect('/courses');
+        res.render('courses/edit', {course});
     })
 }
