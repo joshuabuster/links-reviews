@@ -9,7 +9,9 @@ router.get('/', coursesCtrl.index);
 
 router.get('/:id', isLoggedIn, coursesCtrl.show);
 
+router.get('/new', isLoggedIn, coursesCtrl.newCourse);
 
+router.post('/', isLoggedIn, coursesCtrl.create);
 
 
 
