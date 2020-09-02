@@ -4,7 +4,7 @@
 <br><br>
 <h4>Edit Your Review:</h4>
 <br>
-<form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+<form action="/courses/<%= course._id %>/reviews/<%= review._id %>/update?_method=PUT" method="POST">
     <textarea type="text" name="text" class="new-review"><%= review.text %></textarea>
     <br><br>
     <button type="submit" class="submit-btn">Submit</button>

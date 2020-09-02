@@ -26,8 +26,28 @@ function edit(req, res) {
     })
 }
 
+
+
+
+
+
+
+
+
 function update(req, res) {
-    
+    Course.findById(req.params.courseId, function(err, course){
+        course.reviews.map(review => {
+            if (review._id == req.params.reviewId){
+                review['text'] = req.body.text
+            }
+
+            return review
+        })
+        
+        course.save(function(err){
+            res.redirect(`/courses/${req.params.courseId}`)
+        })
+    })
 };
 
 // function delReview(req, res) {
