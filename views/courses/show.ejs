@@ -8,8 +8,7 @@
     <% course.reviews.forEach(function(r) { %> 
     <p><%= r.text %> </p>
     <% if(r.user.toString() == user._id.toString()) { %> 
-    <a class="details" href="/courses/<%= course._id %>/reviews/<%= r._id %>  ">Edit</a>
-    <a class="details" href="">Delete</a>
+    <a class="details" href="/courses/<%= course._id %>/reviews/<%= r._id %>">Edit</a>
     <% } %> 
     <br><br>
     <% }); %> 
@@ -20,9 +19,6 @@
             <br><br>
             <button type="submit" class="submit-btn">Add Review</button>
         </form>
-
-
-
 
 
 <%- include('../partials/footer') %>

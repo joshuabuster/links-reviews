@@ -5,7 +5,7 @@ module.exports = {
     create,
     edit,
     update,
-//     delReview
+    delReview
 };
 
 function create(req, res) {
@@ -26,14 +26,6 @@ function edit(req, res) {
     })
 }
 
-
-
-
-
-
-
-
-
 function update(req, res) {
     Course.findById(req.params.courseId, function(err, course){
         course.reviews.map(review => {
@@ -48,6 +40,13 @@ function update(req, res) {
     })
 };
 
-// function delReview(req, res) {
-
-// };
+function delReview(req, res) {
+    Course.findById(req.params.courseId, function(err, course) {
+        let idx = course.reviews.indexOf(req.params.reviewId);
+        let newReview = course.reviews.splice(idx, 1);
+        let review = newReview[0];
+        course.save(function(err) {
+            res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review})  
+        })
+    })
+};
