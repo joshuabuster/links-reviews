@@ -14,7 +14,11 @@ const reviewSchema = new Schema({
 const courseSchema = new Schema({
     name: String,
     city: String,
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 module.exports = mongoose.model('Course', courseSchema);
