@@ -45,7 +45,7 @@ function edit(req, res) {
 
 function update(req, res) {
     Course.findByIdAndUpdate(req.params.id, req.body, function(err, course) {
-        if (err) redirect(`/courses/${course._id}/edit`);
+        if (err) res.render(`courses/${course._id}/edit`, {course});
         res.redirect(`/courses/${course._id}`);
     })
 }
