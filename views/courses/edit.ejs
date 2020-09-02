@@ -2,7 +2,7 @@
 
 <h1>Edit or Delete Course</h1>
 <br><br>
-    <form action="/courses/<%= course._id %>?_method_PUT" method="POST">
+    <form action="/courses/<%= course._id %>?_method=PUT" method="POST">
         <h2>Course Name:</h2>
         <br>
         <input type="text" name="name" class="course-form" placeholder="<%= course.name %> ">
