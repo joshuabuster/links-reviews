@@ -9,9 +9,9 @@ router.get('/', coursesCtrl.index);
 
 router.get('/:id', isLoggedIn, coursesCtrl.show);
 
-router.put('/:courseId/reviews/:reviewId/update', reviewsCtrl.update);
 
-router.delete('/:courseId/reviews/:reviewId/delete', reviewsCtrl.delReview);
+
+
 
 
 

@@ -22,7 +22,7 @@ function edit(req, res) {
     Course.findById(req.params.cid, function(err, course) {
         let reviewArray = course.reviews.filter(f => f._id == req.params.rid)
         let review = reviewArray[0];
-            res.render('courses/edit', {course, review, user:req.user._id});
+            res.render('reviews/edit', {course, review, user:req.user._id});
     })
 }
 
@@ -43,20 +43,20 @@ function update(req, res) {
 // =============== NOT DELETING THE CORRECT REVEIEW BECAUSE THE IDX IS INCORRECT =================
 // =============== req.params.reviewId CANNOT BE FOUND IN THE ARRAY ==============================
 
-// function delReview(req, res) {
-//     Course.findById(req.params.courseId, function(err, course) {
-//         let idx = course.reviews.indexOf(req.params.reviewId);
-//         console.log('course: ', course);
-//         console.log('course.reviews: ', course.reviews);
-//         console.log('reviewID: ', req.params.reviewId);
-//         let newReviewArr = course.reviews.splice(idx, 1);
-//         console.log('newReviewArr: ', newReviewArr);
-//         let review = newReviewArr[0];
-//         course.save(function(err) {
-//             res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review})  
-//         })
-//     })
-// };
+function delReview(req, res) {
+    Course.findById(req.params.courseId, function(err, course) {
+        let idx = course.reviews.indexOf(req.params.reviewId);
+        console.log('course: ', course);
+        console.log('course.reviews: ', course.reviews);
+        console.log('reviewID: ', req.params.reviewId);
+        let newReviewArr = course.reviews.splice(idx, 1);
+        console.log('newReviewArr: ', newReviewArr);
+        let review = newReviewArr[0];
+        course.save(function(err) {
+            res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review})  
+        })
+    })
+};
 
 // ==================== NOT WORKING!! DONT KNOW WHY ==================================
 
@@ -71,15 +71,14 @@ function update(req, res) {
 // }
 
 // ============================ ANOTHER TRY ====================================
-// ========================= FindByIdAndDelete =================================
+// ============================= remove() ======================================
 
-function delReview(req, res) {
-    Course.findById(req.params.courseId, function(err, course) {
-        
-        course.reviews.findByIdAndDelete(req.params.reviewId, function(err, review) {
-            course.save(function(err) {
-                res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review}) 
-            })
-        })
-    })
-}
+// function delReview(req, res) {
+//     Course.findOne({'reviews._id': req.params.reviewId}, function(err, course) {
+//         const reviewSubdoc = course.reviews.reviewId(req.params.reviewId);
+//         reviewSubdoc.remove();
+//         course.save(function(err) {
+//             res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review});
+//         })
+//     });
+// }
