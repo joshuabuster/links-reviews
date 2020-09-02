@@ -16,6 +16,9 @@ router.post('/', isLoggedIn, coursesCtrl.create);
 
 router.get('/:id/edit', isLoggedIn, coursesCtrl.edit);
 
+router.put('/:id', isLoggedIn, coursesCtrl.update);
+
+// router.delete('/:id', isLoggedIn, coursesCtrl.delCourse);
 
 
 

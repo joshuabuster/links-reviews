@@ -7,7 +7,8 @@ module.exports = {
     show,
     newCourse,
     create,
-    edit
+    edit,
+    update
 };
 
 function index(req, res) {
@@ -40,4 +41,8 @@ function edit(req, res) {
         // if (!course.user.equals(req.user._id)) return res.redirect('/courses');
         res.render('courses/edit', {course});
     })
+}
+
+function update(req, res) {
+    
 }
