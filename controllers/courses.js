@@ -38,7 +38,6 @@ function create(req, res) {
 
 function edit(req, res) {
     Course.findById(req.params.id, function(err, course) {
-        // if (!course.user.equals(req.user._id)) return res.redirect('/courses');
         res.render('courses/edit', {course});
     })
 }

@@ -49,14 +49,4 @@ function delReview(req, res) {
     })
 };
 
-// function delReview(req, res) {
-//     Course.findById(req.params.courseId, function(err, course) {
-//         let idx = course.reviews.filter(el => el.toString() == req.params.reviewId.toString())[0];
-//         let newReviewArr = course.reviews.splice(idx, 1);
-//         let review = newReviewArr[0];
-//         course.save(function(err) {
-//             res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course, review})  
-//         })
-//     })
-// };
 
