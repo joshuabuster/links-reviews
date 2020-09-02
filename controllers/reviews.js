@@ -40,10 +40,8 @@ function update(req, res) {
             if (review._id == req.params.reviewId){
                 review['text'] = req.body.text
             }
-
             return review
         })
-        
         course.save(function(err){
             res.redirect(`/courses/${req.params.courseId}`)
         })
