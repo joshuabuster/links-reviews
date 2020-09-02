@@ -44,5 +44,5 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    
+
 }
