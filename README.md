@@ -15,6 +15,7 @@ none yet
 * Express
 * Mongo DB
 * Mongoose
+* OAuth
 
 # Getting Started: 
 
