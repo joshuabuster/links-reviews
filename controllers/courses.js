@@ -1,5 +1,6 @@
 const User = require('../models/course');
 const Course = require('../models/course');
+const { render } = require('ejs');
 
 module.exports = {
     index,
@@ -25,5 +26,10 @@ function show(req, res) {
 }  
 
 function create(req, res) {
-
+    const course = new Course(req.body);
+    course.user = req.user._id;
+    course.save(function(err) {
+        if (err) return render('course/new');
+        res.redirect(`/courses/${course._id}`);
+    })
 }
