@@ -2,11 +2,9 @@
 
 <h1><%= title %> </h1>
 <h3>Located in the city of <%= city %>.</h3>
-<%# course.forEach(function(c) { %> 
 <% if(course.user.toString() == user._id.toString()) { %>
 <a href="/courses/<%= course._id %>/edit" class="details" id="course-edit-link">Edit Course Info</a>
 <% } %>
-<%# }); %> 
 <br>
 <h4 id="reviews-list-header">Course Reviews:</h4>
     <br>
