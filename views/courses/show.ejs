@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1><%= title %> </h1>
+<h1 id="show-title"><%= title %> </h1>
 <h3>Located in the city of <%= city %>.</h3>
 <% if(course.user.toString() == user._id.toString()) { %>
 <a href="/courses/<%= course._id %>/edit" class="details" id="course-edit-link">Edit Course Info</a>
