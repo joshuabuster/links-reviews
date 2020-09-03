@@ -2,13 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: rgb(130, 130, 130);
+  /* background-color: rgb(130, 130, 130); */
   font-family: Helvetica;
+}
+
+body {
+  background: url(https://images.unsplash.com/photo-1562204320-31975a5e09ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1460&q=80);
 }
 
 main {
   padding: 35px;
-  color: rgb(53, 228, 53);
+  color: white;
 }
 
 .container {
@@ -34,12 +38,12 @@ a {
 }
 
 .details {
-  color: white;
-  background-color: rgb(130, 130, 130);
+  background-color: rgb(73, 92, 39);
+  color: rgb(148, 148, 252)
 }
 
 a:hover {
-  color: rgb(148, 148, 252);
+  color: rgb(100, 100, 252);
 }
 
 h1 {
@@ -79,7 +83,7 @@ button:hover {
 }
 
 p {
-  color: rgb(53, 228, 53);
+  color: white;
 }
 
 .course-form {
@@ -94,6 +98,9 @@ p {
 #course-edit-link {
   float: right;
 }
+
+
+
 
 
 

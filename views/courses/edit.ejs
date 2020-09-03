@@ -1,23 +1,22 @@
 <%- include('../partials/header') %>
 
-<h1>Edit or Delete Course</h1>
-<h3></h3>
-<br><br>
-    <form action="/courses/<%= course._id %>?_method=PUT" method="POST">
-        <h2>Course Name:</h2>
+    <h1>Edit or Delete Course</h1>
+    <h3></h3>
+    <br><br>
+        <form action="/courses/<%= course._id %>?_method=PUT" method="POST">
+            <h2>Course Name:</h2>
+            <br>
+            <input type="text" name="name" class="course-form" placeholder="<%= course.name %> ">
+            <br><br>
+            <h2>City:</h2>
+            <br>
+            <input type="text" name="city" class="course-form" placeholder="<%= course.city %> ">
+            <br><br>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
         <br>
-        <input type="text" name="name" class="course-form" placeholder="<%= course.name %> ">
-        <br><br>
-        <h2>City:</h2>
-        <br>
-        <input type="text" name="city" class="course-form" placeholder="<%= course.city %> ">
-        <br><br>
-        <button type="submit" class="submit-btn">Submit</button>
-    </form>
-    <br>
-    <form action="/courses/<%= course._id %>?_method=DELETE" method="POST">
-        <button type="submit" class="delete-btn">Delete Course</button>
-    </form>
-
+        <form action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+            <button type="submit" class="delete-btn">Delete Course</button>
+        </form>
 
 <%- include('../partials/footer') %>

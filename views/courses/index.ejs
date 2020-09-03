@@ -1,15 +1,12 @@
 <%- include('../partials/header') %>
 
-
-<h1>Courses In The Greater LA Area</h1>
-<br><br>
-<% courses.forEach(function(c) { %> 
-<h2 class="course-name"><%= c.name %> </h2>
-    <h4 class="city">City: <%= c.city %> </h4>
-        <a class="details" href="/courses/<%= c._id %> ">See Details</a>
-        <br><br><br>
-<% }); %> 
-
-
+    <h1>Courses In The Greater LA Area</h1>
+    <br><br>
+    <% courses.forEach(function(c) { %> 
+    <h2 class="course-name"><%= c.name %> </h2>
+        <h4 class="city">City: <%= c.city %> </h4>
+            <a class="details" href="/courses/<%= c._id %> ">See Details</a>
+            <br><br><br>
+    <% }); %> 
 
 <%- include('../partials/footer') %>

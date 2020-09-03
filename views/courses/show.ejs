@@ -6,6 +6,7 @@
 <a href="/courses/<%= course._id %>/edit" class="details" id="course-edit-link">Edit Course Info</a>
 <% } %>
 <br>
+<div id="show-img"></div>
 <h4 id="reviews-list-header">Course Reviews:</h4>
     <br>
     <% course.reviews.forEach(function(r) { %> 
@@ -22,6 +23,5 @@
             <br><br>
             <button type="submit" class="submit-btn">Add Review</button>
         </form>
-
 
 <%- include('../partials/footer') %>
