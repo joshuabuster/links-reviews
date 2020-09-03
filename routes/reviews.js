@@ -13,7 +13,7 @@ router.delete('/courses/:courseId/reviews/:reviewId/delete', reviewsCtrl.delRevi
 
 function isLoggedIn(req, res, next) {
     if(req.isAuthenticated() ) return next();
-    res.redirect('/auth/google');
+    res.redirect('/courses');
 }
 
 module.exports = router;

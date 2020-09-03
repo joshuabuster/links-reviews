@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
 
 
-<h1>Edit or Delete Your Review</h1>
+<h1><%= course.name %></h1>
+<h3>Located in the city of <%= course.city %></h3>
 <br><br>
-<h4>Edit Your Review:</h4>
+<h4>Edit or Delete Your Review:</h4>
 <br>
 <form action="/courses/<%= course._id %>/reviews/<%= review._id %>/update?_method=PUT" method="POST">
     <textarea type="text" name="text" class="new-review"><%= review.text %></textarea>
