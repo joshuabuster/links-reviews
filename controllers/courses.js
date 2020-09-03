@@ -26,7 +26,7 @@ function show(req, res) {
     Course.findById(req.params.id, function(err, course) {
         res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course });
     });
-}  
+}
 
 function create(req, res) {
     const course = new Course(req.body);
