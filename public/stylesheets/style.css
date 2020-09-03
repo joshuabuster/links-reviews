@@ -7,12 +7,14 @@
 }
 
 body {
-  background: url(https://images.unsplash.com/photo-1562204320-31975a5e09ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1460&q=80);
+  background: url(https://images.unsplash.com/photo-1562204320-31975a5e09ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1330&q=80);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 main {
   padding: 35px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .container {
