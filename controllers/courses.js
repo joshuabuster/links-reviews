@@ -24,7 +24,16 @@ function newCourse(req, res) {
 
 function show(req, res) {
     Course.findById(req.params.id, function(err, course) {
-        res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course });
+        console.log(course);
+        const ids = [];
+        course.reviews.forEach(element => {
+            ids.push(element.user)
+        });
+        console.log(ids[1], typeof ids[0]);
+        User.findById(ids[1], function(err, user) {
+            console.log(user);
+            res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course });
+        })
     });
 }
 
