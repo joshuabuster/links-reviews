@@ -1,4 +1,4 @@
-const User = require('../models/course');
+const User = require('../models/user');
 const Course = require('../models/course');
 const { render } = require('ejs');
 
@@ -24,18 +24,9 @@ function newCourse(req, res) {
 
 function show(req, res) {
     Course.findById(req.params.id, function(err, course) {
-        console.log(course);
-        const ids = [];
-        course.reviews.forEach(element => {
-            ids.push(element.user)
-        });
-        console.log(ids[1], typeof ids[0]);
-        User.findById(ids[1], function(err, user) {
-            console.log(user);
-            res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course });
-        })
+        res.render('courses/show', { title: `${course.name}`, city: `${course.city}`, course });
     });
-}
+}  
 
 function create(req, res) {
     const course = new Course(req.body);

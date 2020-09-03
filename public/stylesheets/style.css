@@ -42,7 +42,8 @@ a {
 
 .details {
   background-color: rgba(73, 92, 39, 0);
-  color: rgb(166, 166, 254)
+  color: rgb(6, 172, 243);
+  font-size: 18px;
 }
 
 a:hover {
@@ -118,6 +119,7 @@ p {
 #landing-subtitle {
   color: rgb(2, 69, 2);
 }
+
 
 
 
