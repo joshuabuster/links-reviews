@@ -4,7 +4,11 @@ Links-Reviews is a place to read about and review golf courses in the greater Lo
 
 # Screenshots:
 
-none yet
+![landing-page](public/imgs/landing-page.png)
+![index-page](public/imgs/index-page.png)
+![show-page](public/imgs/show-page.png)
+![add-course](public/imgs/add-course.png)
+![edit-review](public/imgs/edit.png)
 
 # Technologies Used:
 
