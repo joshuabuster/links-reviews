@@ -1,6 +1,6 @@
 # Links-Reviews
 
-Links-Reviews is a place to read about and review golf courses in the greater Los Angeles area. When a user is NOT logged in, they can see a list of courses in the area. When a user logs in, they can write a review about their experence at a course on the list. They can also add courses not on the list and write reviews about them and their experiences while visiting them.
+Links-Reviews is a place to read about and review golf courses in the greater Los Angeles area. When a user is NOT logged in, they can see a list of courses in the area. When a user logs in, they can write a review about their experience at a course on the list. They can also add courses not on the list and write reviews about them and their experiences while visiting them.
 
 # Screenshots:
 
