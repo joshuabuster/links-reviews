@@ -3,9 +3,11 @@
     <h1 id="index-title">Courses In The Greater LA Area</h1>
     <br><br>
         <% courses.forEach(function(c) { %> 
+        <div class="courseIndexItem">
         <h2 class="course-name"><%= c.name %> </h2>
             <h4 class="city">City: <%= c.city %> </h4>
                 <a class="details" href="/courses/<%= c._id %> ">See Details</a>
+        </div>
                 <br><br><br>
         <% }); %> 
    
