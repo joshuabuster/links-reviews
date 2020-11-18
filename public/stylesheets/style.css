@@ -50,11 +50,11 @@ li {
 
 .landing-btn li a{
   background-color: rgba(255, 255, 255, 0);
-  color: rgb(4, 96, 4);
+  color: ghostwhite;
 }
 .landing-btn li a:hover{
   text-decoration: underline;
-  color: ghostwhite;
+  color: rgb(4, 96, 4);
 }
 
 a {
