@@ -17,6 +17,25 @@ main {
   color: rgb(255, 255, 255);
 }
 
+nav{
+  background-color: white;
+  padding: 20px;
+  position: sticky;
+  top: 106px;
+  z-index: 1;
+}
+nav ul{
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+nav li{
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+
 .container {
   display: flex;
   padding: 30px;
@@ -127,6 +146,13 @@ p {
   width: 450px;
 }
 
+@media screen and (max-width: 600px) {
+  nav li{
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+  }
+}
 
 
 
