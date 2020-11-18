@@ -143,12 +143,18 @@ p {
   color: rgb(2, 69, 2);
 }
 
+.course-item-container{
+  display: grid;
+}
+
 .courseIndexItem {
   border: solid white;
   background-color: forestgreen;
   padding: 10px;
-  width: 450px;
+  width: 40%;
 }
+
+/* responsive */
 
 @media screen and (max-width: 600px) {
   nav li{
