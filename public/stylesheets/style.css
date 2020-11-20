@@ -176,7 +176,7 @@ p {
   }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   .course-item-container {
     display: grid;
     justify-content: center;
@@ -187,7 +187,9 @@ p {
   }
 }
 
-
-
-
+@media screen and (max-width: 375px) {
+  .new-review {
+    width: 300px;
+  }
+}
 
