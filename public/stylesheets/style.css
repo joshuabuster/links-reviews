@@ -191,5 +191,10 @@ p {
   .new-review {
     width: 300px;
   }
+  #landing-subtitle {
+    border-radius: 25px;
+    padding:6px;
+    background-color: rgba(255, 255, 255, .2);
+  }
 }
 
