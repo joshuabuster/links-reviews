@@ -2,16 +2,16 @@
 
     <h1>Add A New Course</h1>
     <br><br>
-    <form action="/courses" method="POST">
-        <h2>Course Name:</h2>
-        <br>
-        <input type="text" name="name" class="course-form">
-        <br><br>
-        <h2>City:</h2>
-        <br>
-        <input type="text" name="city" class="course-form">
-        <br><br>
-        <button type="submit" class="submit-btn">Add Course</button>
-    </form>
+        <form action="/courses" method="POST" class="form-add-edit">
+            <h2>Course Name:</h2>
+            <br>
+            <input type="text" name="name" class="course-form">
+            <br><br>
+            <h2>City:</h2>
+            <br>
+            <input type="text" name="city" class="course-form">
+            <br><br>
+            <button type="submit" class="submit-btn">Add Course</button>
+        </form>
 
 <%- include('../partials/footer') %>

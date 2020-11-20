@@ -3,10 +3,13 @@
 
 <h1 id="show-title"><%= title %></h1>
 <h3>Located in the city of <%= city %>.</h3>
-<% if(course.user.toString() == user._id.toString()) { %> 
-<a href="/courses/<%= course._id %>/edit" class="details" id="course-edit-link">Edit Course Info</a>
-<% } %> 
 <br>
+<% if(course.user.toString() == user._id.toString()) { %> 
+<div class="course-edit-link-container">
+<a href="/courses/<%= course._id %>/edit" class="details" id="course-edit-link">Edit Course Info</a>
+</div>
+<% } %> 
+<br><br>
 <h4 id="reviews-list-header">Course Reviews:</h4>
     <br>
     <% course.reviews.forEach(function(r) { %> 

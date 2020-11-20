@@ -116,16 +116,23 @@ p {
 }
 
 .course-form {
-  width: 30%;
+  width: 250px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
 }
-
+.course-edit-link-container {
+  text-align: center;
+  width: 100%;
+}
 #course-edit-link {
-  float: right;
+  font-size: 25px;
+  text-align: center;
+}
+#course-edit-link:hover {
+  text-decoration: underline;
 }
 
 #landing-body {
@@ -154,6 +161,11 @@ p {
   width: 40%;
 }
 
+.form-add-edit {
+  display: grid;
+  justify-content: center;
+}
+
 /* responsive */
 
 @media screen and (max-width: 600px) {
@@ -162,7 +174,17 @@ p {
     width: 100%;
     margin: 12px 0;
   }
+}
 
+@media screen and (max-width: 1050px){
+  .course-item-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .courseIndexItem {
+    width: 300px;
+  }
 }
 
 
